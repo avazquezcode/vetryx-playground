@@ -92,7 +92,7 @@ export default function Home() {
     },
     {
       value: "fibo",
-      text: "Fibonacci Sequence"
+      text: "Nth Fibonacci Number"
     },
   ];
 
