@@ -8,6 +8,7 @@ import { GetFiboSequence } from "@/components/predefined_codes/fibo";
 
 
 async function interpret(sourceCode: string, outputSetter: any, isCodeRunningSetter: any) {
+  isCodeRunningSetter(true)
   // Wait for a second so the button shows the loading animation
   await new Promise(r => setTimeout(r, 1000));
 
@@ -53,8 +54,8 @@ export default function Home() {
   const [isCodeRunning, setIsCodeRunning] = useState(false);
 
   // Editor refs
-  const editorRef = useRef(null);
-  const editorOutputRef = useRef(null);
+  const editorRef = useRef<any>();
+  const editorOutputRef = useRef<any>();
 
   // Editor handlers
   function handleEditorDidMount(editor: any, _: any) {
@@ -75,7 +76,13 @@ export default function Home() {
   };
 
   async function interpretCode() {
-    interpret(inputContent, setOutputContent, setIsCodeRunning);
+    var current = editorRef.current;
+    var value = "";
+    
+    if (current) {
+      value = current.getValue()
+    }
+    interpret(value, setOutputContent, setIsCodeRunning);
   }
 
   var predefinedCodeOptions = [
