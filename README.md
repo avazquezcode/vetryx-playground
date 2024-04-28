@@ -30,13 +30,15 @@ It also supports some predefined codes to test the interpreter quickly (eg: fibo
 
 6 - Update the `.env.local` file in `./playground` directory with the variables that apply to your app :)
 
-7 - Run `make build-local` to build the image.
+7 - CD into `./playground` directory and run: `npm install`.
 
-8 - Run `make run-local` to run the container.
+8 - Go back to root directory `cd ..` and run `make build-local` to build the image.
 
-9 - The app should be listening in [http://localhost:3000](http://localhost:3000) in a few seconds :)
+9 - Run `make run-local` to run the container.
 
-10 - Have fun....
+10 - The app should be listening in [http://localhost:3000](http://localhost:3000) in a few seconds :)
+
+11 - Have fun....
 
 ## How to run this in production?
 
