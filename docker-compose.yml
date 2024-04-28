@@ -1,0 +1,9 @@
+services:
+  playground:
+      build:
+        context: .
+        dockerfile: ./build/docker/local/Dockerfile
+      ports:
+        - "3000:3000"
+      volumes:
+        - ./playground/:/app
