@@ -32,7 +32,7 @@ async function interpret(sourceCode: string, outputSetter: any, isCodeRunningSet
     const data = await res.json();
     // Set the data to the output
     // Notice that the API must return the output in "data.message" field as a string
-    outputSetter("// Output: \n\n" + data.message);
+    outputSetter("# Output: \n\n" + data.message);
     // stop loading
     isCodeRunningSetter(false)
   } catch (err) {
@@ -48,8 +48,8 @@ export default function Home() {
   const fiboCode = GetFiboSequence()
 
   // States
-  const [inputContent, setInputContent] = useState("// Hey there, welcome :)");
-  const [outputContent, setOutputContent] = useState("// The output will appear here :)");
+  const [inputContent, setInputContent] = useState("# Hey there, welcome :)");
+  const [outputContent, setOutputContent] = useState("# The output will appear here :)");
   const [isCodeRunning, setIsCodeRunning] = useState(false);
 
   // Editor refs
@@ -67,7 +67,7 @@ export default function Home() {
 
   function changePredefinedCode(e: any) {
     if (e.target.value == "empty") {
-      setInputContent("// You can start typing here...");
+      setInputContent("# You can start typing here...");
     }
     if (e.target.value == "fibo") {
       setInputContent(fiboCode);
@@ -107,8 +107,8 @@ export default function Home() {
       </div>
       <Divider className="my-4" />
       <div className="flex gap-10">
-        <Editor height="70vh" defaultLanguage="go" value={inputContent} theme="vs-dark" onMount={handleEditorDidMount} />
-        <Editor height="70vh" defaultLanguage="go" value={outputContent} theme="vs-dark" onMount={handleEditorOutputDidMount} />
+        <Editor height="70vh" defaultLanguage="python" value={inputContent} theme="vs-dark" onMount={handleEditorDidMount} />
+        <Editor height="70vh" defaultLanguage="python" value={outputContent} theme="vs-dark" onMount={handleEditorOutputDidMount} />
       </div>
     </div>
   );
