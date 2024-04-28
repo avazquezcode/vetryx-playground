@@ -5,7 +5,7 @@ build-local:
 	docker-compose build
 
 build-prod:
-	docker build -t vetryx-play -f build/docker/prod/Dockerfile .
+	docker buildx build --platform linux/amd64 -t vetryx-play -f build/docker/prod/Dockerfile --load .
 
 run-local:
 	docker-compose up -d
