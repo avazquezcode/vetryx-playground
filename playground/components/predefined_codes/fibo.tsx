@@ -1,6 +1,5 @@
-export function GetFiboSequence() {
-    return `
-fn fibonacci(n) {
+export function GetNthFibo() {
+    return `fn fibonacci(n) {
     a := 0
     b := 1
 

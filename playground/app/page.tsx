@@ -4,7 +4,10 @@ import Editor from '@monaco-editor/react';
 import React, { useRef, useState } from 'react';
 import { Select, SelectItem } from "@nextui-org/select";
 import { Divider } from "@nextui-org/divider";
-import { GetFiboSequence } from "@/components/predefined_codes/fibo";
+import { GetNthFibo } from "@/components/predefined_codes/fibo";
+import { GetMinMax } from "@/components/predefined_codes/minmax";
+import { GetSleep } from "@/components/predefined_codes/sleep";
+import { GetPrintOdd } from "@/components/predefined_codes/printodd";
 
 
 async function interpret(sourceCode: string, outputSetter: any, isCodeRunningSetter: any) {
@@ -46,7 +49,11 @@ async function interpret(sourceCode: string, outputSetter: any, isCodeRunningSet
 
 export default function Home() {
   // Load predefined codes
-  const fiboCode = GetFiboSequence()
+  const fiboCode = GetNthFibo()
+  const minAndMaxCode = GetMinMax()
+  const sleepCode = GetSleep()
+  const printOddCode = GetPrintOdd()
+
 
   // States
   const [inputContent, setInputContent] = useState("# Hey there, welcome :)");
@@ -73,6 +80,15 @@ export default function Home() {
     if (e.target.value == "fibo") {
       setInputContent(fiboCode);
     }
+    if (e.target.value == "minmax") {
+      setInputContent(minAndMaxCode);
+    }
+    if (e.target.value == "sleep") {
+      setInputContent(sleepCode);
+    }
+    if (e.target.value == "printodd") {
+      setInputContent(printOddCode);
+    }
   };
 
   async function interpretCode() {
@@ -93,6 +109,18 @@ export default function Home() {
     {
       value: "fibo",
       text: "Nth Fibonacci Number"
+    },
+    {
+      value: "minmax",
+      text: "Min and Max"
+    },
+    {
+      value: "minmax",
+      text: "Sleep"
+    },
+    {
+      value: "printodd",
+      text: "Print Odd Numbers"
     },
   ];
 
