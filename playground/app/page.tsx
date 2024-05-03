@@ -4,6 +4,7 @@ import Editor from '@monaco-editor/react';
 import React, { useRef, useState } from 'react';
 import { Select, SelectItem } from "@nextui-org/select";
 import { Divider } from "@nextui-org/divider";
+import {Chip} from "@nextui-org/chip";
 import { GetNthFibo } from "@/components/predefined_codes/fibo";
 import { GetMinMax } from "@/components/predefined_codes/minmax";
 import { GetSleep } from "@/components/predefined_codes/sleep";
@@ -94,7 +95,7 @@ export default function Home() {
   async function interpretCode() {
     var current = editorRef.current;
     var value = "";
-    
+
     if (current) {
       value = current.getValue()
     }
@@ -113,10 +114,6 @@ export default function Home() {
     {
       value: "minmax",
       text: "Min and Max"
-    },
-    {
-      value: "minmax",
-      text: "Sleep"
     },
     {
       value: "printodd",
@@ -141,9 +138,14 @@ export default function Home() {
         </Button>
       </div>
       <Divider className="my-4" />
-      <div className="flex gap-10">
-        <Editor height="70vh" defaultLanguage="python" value={inputContent} theme="vs-dark" onMount={handleEditorDidMount} />
-        <Editor height="70vh" defaultLanguage="python" value={outputContent} theme="vs-dark" onMount={handleEditorOutputDidMount} />
+      <div className="flex gap-10 justify-center">
+        <Editor height="40vh" width="150vh" defaultLanguage="python" value={inputContent} theme="vs-dark" onMount={handleEditorDidMount} />
+      </div>
+      <div className="flex py-3 justify-end">
+      <Chip color="primary" variant="solid">Output</Chip>
+      </div>
+      <div className="flex gap-10 justify-center">
+        <Editor height="20vh" width="150vh" defaultLanguage="python" value={outputContent} theme="vs-dark" onMount={handleEditorOutputDidMount} />
       </div>
     </div>
   );
