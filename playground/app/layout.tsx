@@ -11,6 +11,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className='dark'>
+      <head>
+        <title>{process.env.APP_NAME}</title>
+      </head>
       <body>
         <Providers>
           <div className="relative flex flex-col">
