@@ -27,18 +27,6 @@ export const Navbar = () => {
                     </NextLink>
                 </NavbarBrand>
                 <ul className="hidden lg:flex gap-4 justify-start ml-2">
-                    <NavbarItem key="#">
-                        <NextLink
-                            className={clsx(
-                                linkStyles({ color: "foreground" }),
-                                "data-[active=true]:text-primary data-[active=true]:font-medium"
-                            )}
-                            color="foreground"
-                            href="#"
-                        >
-                            Playground
-                        </NextLink>
-                    </NavbarItem>
                     <NavbarItem key="#doc">
                         <Link
                             isExternal

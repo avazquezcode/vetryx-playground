@@ -123,7 +123,7 @@ export default function Home() {
 
   return (
     <div>
-      <div className="flex gap-10 justify-end">
+      <div className="flex gap-10 justify-end py-2">
         <Select
           items={predefinedCodeOptions}
           label="Predefined Code"
@@ -137,7 +137,6 @@ export default function Home() {
           Run Code
         </Button>
       </div>
-      <Divider className="my-4" />
       <div className="flex gap-10 justify-center">
         <Editor height="40vh" width="150vh" defaultLanguage="python" value={inputContent} theme="vs-dark" onMount={handleEditorDidMount} />
       </div>
