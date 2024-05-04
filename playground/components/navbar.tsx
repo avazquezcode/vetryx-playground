@@ -39,6 +39,19 @@ export const Navbar = () => {
                             Playground
                         </NextLink>
                     </NavbarItem>
+                    <NavbarItem key="#doc">
+                        <Link
+                            isExternal
+                            className={clsx(
+                                linkStyles({ color: "foreground" }),
+                                "data-[active=true]:text-primary data-[active=true]:font-medium"
+                            )}
+                            color="foreground"
+                            href={process.env.LANGUAGE_DOC_URL ? process.env.LANGUAGE_DOC_URL : "#"}
+                        >
+                            Language Documentation
+                        </Link>
+                    </NavbarItem>
                 </ul>
             </NavbarContent>
 
