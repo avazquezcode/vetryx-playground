@@ -4,7 +4,7 @@ import Editor from '@monaco-editor/react';
 import React, { useRef, useState } from 'react';
 import { Select, SelectItem } from "@nextui-org/select";
 import { Divider } from "@nextui-org/divider";
-import {Chip} from "@nextui-org/chip";
+import { Chip } from "@nextui-org/chip";
 import { GetNthFibo } from "@/components/predefined_codes/fibo";
 import { GetMinMax } from "@/components/predefined_codes/minmax";
 import { GetSleep } from "@/components/predefined_codes/sleep";
