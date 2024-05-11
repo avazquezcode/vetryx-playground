@@ -1,20 +1,20 @@
 export function GetClosure() {
     return `fn buildCounter() {
-    i := 0
+    i := 0;
 
     fn count() {
-        i = i + 1
-        print i
+        i = i + 1;
+        print i;
     }
     
-    return count
+    return count;
 }
 
-dec counter
-counter = buildCounter()
+dec counter;
+counter = buildCounter();
 
-counter() # Prints 1
-counter() # Prints 2
-counter() # Prints 3
+counter(); # Prints 1
+counter(); # Prints 2
+counter(); # Prints 3
 `
 }

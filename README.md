@@ -1,9 +1,5 @@
 # Vetryx Playground
-This is a playground developed with Next.js and NextUI, using Monaco editor, for the Vetryx language (which I developed for fun).
-
-## What is vetryx?
-Vetryx is a language I developed for fun. Repo of the interpreter: [here](https://github.com/avazquezcode/govetryx). 
-Docs about the language will be added soon...
+This is a playground developed with Next.js and NextUI, using Monaco editor, for the Vetryx language. More details [here](https://github.com/avazquezcode/govetryx).
 
 ## How does it work?
 

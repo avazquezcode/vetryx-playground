@@ -1,10 +1,10 @@
 export function GetPrintOdd() {
-    return `dec i = 1
+    return `dec i = 1;
 while i < 50 {
     if i % 2 == 0 {
-        print i
+        print i;
     }
-    i = i + 1
+    i = i + 1;
 }
 `
 }

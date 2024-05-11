@@ -1,30 +1,30 @@
 export function GetNthFibo() {
     return `fn fibonacci(n) {
-    a := 0
-    b := 1
+    a := 0;
+    b := 1;
 
     if n < 0 {
-        print "invalid input"
+        print "invalid input";
     }
 
     if n == 0 {
-        return a
+        return a;
     }
 
     if n == 1 {
-        return b
+        return b;
     }
 
-    i := 2
+    i := 2;
     while i < n+1 {
-        c := a + b
-        a = b
-        b = c
-        i = i + 1
+        c := a + b;
+        a = b;
+        b = c;
+        i = i + 1;
     } 
-    return b
+    return b;
 }
 
-print fibonacci(10)
+print fibonacci(10);
 `
 }
