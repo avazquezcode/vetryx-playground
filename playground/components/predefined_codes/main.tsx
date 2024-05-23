@@ -2,6 +2,7 @@ import { GetClosure } from "./closure"
 import { GetNthFibo } from "./fibo"
 import { GetMinMax } from "./minmax"
 import { GetPrintOdd } from "./printodd"
+import { GetRecursive } from "./recursive"
 import { GetSleep } from "./sleep"
 
 // Load predefined codes
@@ -10,6 +11,7 @@ const minAndMaxCode = GetMinMax()
 const sleepCode = GetSleep()
 const printOddCode = GetPrintOdd()
 const closureCode = GetClosure()
+const recursiveCode = GetRecursive()
 
 export const predefinedCodeOptions = () => [
   {
@@ -32,6 +34,10 @@ export const predefinedCodeOptions = () => [
     value: "closure",
     text: "Closure"
   },
+  {
+    value: "recursive",
+    text: "Recursion"
+  },
 ];
 
 export function changePredefinedCode(e: any, callback: any) {
@@ -52,5 +58,8 @@ export function changePredefinedCode(e: any, callback: any) {
   }
   if (e.target.value == "closure") {
     callback(closureCode);
+  }
+  if (e.target.value == "recursive") {
+    callback(recursiveCode);
   }
 };
