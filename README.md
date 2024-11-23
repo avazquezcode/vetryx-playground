@@ -1,5 +1,5 @@
 # Vetryx Playground
-This is a playground developed with Next.js and NextUI, using Monaco editor, for the Vetryx language. More details [here](https://github.com/avazquezcode/govetryx).
+This is a playground developed with Next.js and NextUI, using Monaco editor, for the Vetryx language. More details [here](https://github.com/avazquezcode/vetryx).
 
 ## How does it work?
 
